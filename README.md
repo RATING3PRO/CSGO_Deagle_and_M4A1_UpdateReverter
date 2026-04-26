@@ -25,12 +25,3 @@
 3.  运行 `./spcomp CSGO_UpdateReverter.sp` 进行编译。
 4.  将编译生成的 `CSGO_UpdateReverter.smx` 文件放入 `addons/sourcemod/plugins/` 目录。
 5.  重启服务器或在控制台输入 `sm plugins load CSGO_UpdateReverter.smx` 加载插件。
-
-## 代码详情 
-
-该插件使用 `CSWeaponsAPI` 直接在内存中修改武器数据，比使用 SDKHooks 动态修改伤害或弹匣更为高效且整洁：
-
-*   `CSWeaponData.GetByClassName("weapon_deagle").Damage = 63;`
-*   `CSWeaponData.GetByClassName("weapon_m4a1_silencer").MaxClip1 = 25;`
-
-这种方法直接更改了游戏内部的武器定义。
